@@ -5,6 +5,8 @@
 | --- | :---: | ---: |
 | Full-Metal Robot Car Chassis |[Chassis](https://www.sainsmart.com/products/full-metal-robot-car-chassis)| 1 |
 
+![Tracked chassis](https://github.com/mminute/ArduinoROV/blob/master/Chassis.JPG)
+
 
 ### Initial buy from [SparkFun](https://www.sparkfun.com/ "SparkFun's Homepage")
 
@@ -26,3 +28,5 @@
 | USB Mini-B Cable - 6 Foot | [CAB-11301](https://www.sparkfun.com/products/11301) | 2 |
 | XBee Explorer USB |[WRL-11812](https://www.sparkfun.com/products/11812)| 2 |
 | XBee Pro 60mW PCB Antenna - Series 1 (802.15.4) |[WRL-11216](https://www.sparkfun.com/products/11216)| 2 |
+
+![Lots of parts!](https://github.com/mminute/ArduinoROV/blob/master/SparkfunParts.JPG)
