@@ -1,5 +1,14 @@
 ## Parts List
 
+### Tamiya Chassis
+| Component | ID | Quant |
+| --- | :---: | ---: |
+|Double Gearbox Left/Right Independent 4 speed | [No. 70168](https://www.tamiya.com/english/products/70168double_gearbox/index.htm) | 1 |
+|Tracked Vehickle Chassis Kit | [No. 70108](https://www.tamiyausa.com/shop/educational-construction/tracked-vehicle-chassis-kit/) | 1 |
+| Track & Wheel Set | [No. 70100](https://www.tamiya.com/english/products/list/tires_tracks/kit700S01.htm) | 1 |
+
+
+
 ### SainSmart
 | Component | ID | Quant |
 | --- | :---: | ---: |
