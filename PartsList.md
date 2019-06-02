@@ -7,7 +7,7 @@
 |Tracked Vehickle Chassis Kit | [No. 70108](https://www.tamiyausa.com/shop/educational-construction/tracked-vehicle-chassis-kit/) | 1 |
 | Track & Wheel Set | [No. 70100](https://www.tamiya.com/english/products/list/tires_tracks/kit700S01.htm) | 1 |
 
-
+![Tamiya Tracked chassis](https://github.com/mminute/ArduinoROV/blob/master/TamiyaChassis.JPG)
 
 ### SainSmart
 | Component | ID | Quant |
