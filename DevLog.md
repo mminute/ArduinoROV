@@ -1,11 +1,68 @@
 ## Development Log
 
-### 2019-06-02
+### 2019-06-02 - 2019-06-07
 Built up a Tamiya tracked chassis as a test bed.  I think the motors on the metal tank chassis required more power than the arduino can provide.
 
 Attempted to run the arduino and motors off of a 6V AA battery bank but the motors seem to draw too much power.  Upgrading to 9V to see if this fixes things.
 
 Still getting weird behavior when running with 9V.  There is 7-8V at the output from the motor shield which should be plenty for the motors.
+
+Turns out that a 9V battery is not sufficient to supply the Arduino board and the motor.
+Wiring up a set of AA batteries to provide 12V through the Ardumoto dev-14129 shield succesfully drives the motor.
+
+I'm having difficulty measuring motor draw for both the 130 type motors on the Tamiya gearbox and the motors on the metal chassis.
+
+If I understand correctly, amerage must be measured in series.  A simple circuit where the ammeter is connected between the battery and the motor *should* work but when I insert the ammeter into the circuit nothing runs.  The motor runs fine when the wires that would connect the ammeter are connected directly.
+
+Solutions:
+Run the 6V battery banks in parallel to increase the amperage available while providing voltage sufficient for the Arduino (7V-12V) and closer to the motor specs (3V).  Purchased a 130 Type motor that operates at 6V/800mAmp stall from Pololu.com
+
+Need to check which program is loaded onto the Arduino.  Either there is not enough current to run both motors or not all command from TestMotorShield.ino are enabled at this time.
+
+I think a motor driver where the power to the arduino for logic and power to the motors is completely separate would be much preferable.
+
+The test program is supposed to:
+1. Run motor A backward
+2. Run motor A forward
+3. Run motor B backward
+4. Run motor B forward
+5. Run motors A & B forward
+6. Run motors A & B backward
+7. Run motor A forward while motor B runs backward
+
+Using 3 banks of 4 AA batteries the test program runs steps 1-6 fine but step 7 is not running as expected.
+Maybe stop the motors before having them run in opposition?
+
+There is definitely an issue with running the motors in opposition. The addition of delays/stopping the motors before running in opposition does not do anything.
+
+Going to try switching out the motors that came with the kit for Polulu [#1117](https://www.pololu.com/product/1117).
+
+Agh!  The issue was definitely the cheap motors that came with the Tamiya kit.  Swapping for the Pololu 1117's runs perfectly.  They run on a 9V battery for bank of 4xAA (6V) just fine.  Lesson learned- Don't use cheap motor.  Next time I should probably just go with/learn about continuos rotation servos.
+
+So-
+2 banks of 4xAA batteries runs the test program ok.
+1/2 speed is pretty weak.
+
+Lots of wasted time on the Tamiya motors.  Upside is that I built some tooling and learned a few thing/learned that I need to learn a few things.
+
+- Put together a bunch of jumper wires with bladed connectors
+- Made 2 4xAA battery holders with bladed connectors
+- Made a 4xAA battery holder with bladed connectors and barrel connector
+- Decided that I need to get a better multimeter
+- Learned what an 'H bridge' is. re: L298N motor drivers
+- Need to learn more about the L298N and motor drivers in general
+- I think there is value in completely separating the electrical input for the motors from the electrical input to the Arduino for logic.  The motor driver board I have may be capable of this but by default voltage is sent down to the Arduino from the motor driver.  I'm not sure, but it way be regulated down to 5V or so before being sent to the Arduino.
+
+Ref:
+https://www.robotshop.com/community/forum/t/using-arduino-and-l298n-to-control-tamiya-twin-motor-gearbox/6825
+
+https://arduino.stackexchange.com/questions/1314/how-can-i-connect-the-tamiya-double-gearbox-to-arduino-uno
+
+https://forum.arduino.cc/index.php?topic=132225.0
+
+https://www.pololu.com/docs/0J11?utm_source=rb-community&utm_medium=forum&utm_campaign=using-arduino-and-l298n-to-control-tamiya-twin-motor-gearbox
+
+https://www.pololu.com/product/120
 
 #### 2019-03-18
 Wondering if I should use multiple Arduinos.  Say, one for sensing, another for position data and driving.  This might help with data rx/tx pin limitations.

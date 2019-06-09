@@ -1,5 +1,10 @@
 ## Parts List
 
+### New Motor
+| Component | ID | Quant |
+| --- | :---: | ---: |
+| Pololu 130 size motor, 6V 11.5kRPM, 800mA stall | [#1117](https://www.pololu.com/product/1117) | 5 |
+
 ### Tamiya Chassis
 | Component | ID | Quant |
 | --- | :---: | ---: |
