@@ -29,10 +29,10 @@ Motor setup:
   Motor B- Left Side
 
    -------------------
-      | + | - | - | + |
+      | - | + | + | - |
       |   |   |   |   |
     Motor A   |   Motor B
-    Red             Yellow
+    Yellow        Orange
 
 */
 
@@ -88,7 +88,6 @@ void loop()
   delay(2000);  // Drive forward for a second
   stopArdumoto(MOTOR_A);  // STOP motor A 
   stopArdumoto(MOTOR_B);  // STOP motor B 
-
 }
 
 // driveArdumoto drives 'motor' in 'dir' direction at 'spd' speed
