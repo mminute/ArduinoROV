@@ -1,5 +1,20 @@
 ## Development Log
 
+### 2019-07-07
+Started integrating components together!
+It still needs work but I setup the LCD screen to display
+
+### 2019-06-29
+Learning a lot about GPS (See UnderstandingNEMA.md)
+Soldered male headers onto the Sparkfun GPS logger shield [GPS-13750](https://www.sparkfun.com/products/13750)
+
+Ran 2 gps examples, one of just a serial monitor output of the raw NEMA data from the logger shield, one using a library to nicely parse the data (TinyGPS++).
+
+Did not look into logging to a SD card from the shield.
+
+Had some trouble figuring out the LCD screen but got it working using [this code](https://learn.sparkfun.com/tutorials/avr-based-serial-enabled-lcds-hookup-guide/all#i2c-hardware-hookup--example-code---basic) from the tutorial (currently in Example1-HelloWorld.ino).
+See LCD-WiringDiagram for how to connect the LCD to the Arduino 
+
 ### 2019-06-02 - 2019-06-07
 Built up a Tamiya tracked chassis as a test bed.  I think the motors on the metal tank chassis required more power than the arduino can provide.
 
